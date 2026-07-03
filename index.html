@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Quantum Drive | Pure Science & Research Preparation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Syncopate:wght@700&family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-dark: #0a0a12;
             --card-bg: #121225;
-            --accent-cyan: #00f2fe;
-            --accent-blue: #4facfe;
-            --text-main: #f8fafc;
+            --accent-cyan: #00bfff; /* The electric blue from your logo */
+            --text-main: #e2e8f0;   
             --text-muted: #94a3b8;
         }
 
@@ -18,12 +18,12 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
 
         body {
             background-color: var(--bg-dark);
             color: var(--text-main);
+            font-family: 'Segoe UI', sans-serif;
             overflow-x: hidden;
             line-height: 1.6;
         }
@@ -36,7 +36,6 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* Branding integrated with your logo image */
         .brand {
             display: flex;
             align-items: center;
@@ -48,16 +47,25 @@
             height: 55px;
             border-radius: 8px;
             object-fit: cover;
-            border: 1px solid rgba(0, 242, 254, 0.2);
+            border: 1px solid rgba(0, 191, 255, 0.2);
         }
 
+        /* Set to Michroma/Syncopate to replicate the wide, square layout of your graphic */
         .logo-text {
-            font-size: 1.4rem;
-            font-weight: 700;
-            background: linear-gradient(45deg, var(--accent-blue), var(--accent-cyan));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-family: 'Michroma', sans-serif;
+            font-size: 1.1rem;
+            text-transform: uppercase;
             letter-spacing: 1px;
+        }
+
+        /* Solid word-wise colors matching your logo exactly */
+        .logo-word-blue {
+            color: #00bfff; /* Solid Electric Blue */
+            font-weight: bold;
+        }
+
+        .logo-word-silver {
+            color: #ffffff; /* Solid Metallic White/Silver */
         }
 
         nav a {
@@ -83,18 +91,17 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
+            font-family: 'Syncopate', sans-serif;
+            font-size: 3.2rem;
+            font-weight: 700;
             margin-bottom: 1.5rem;
             letter-spacing: -1px;
-            max-width: 800px;
-            line-height: 1.2;
+            max-width: 900px;
+            line-height: 1.3;
         }
 
         .hero h1 span {
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--accent-cyan);
         }
 
         .hero p {
@@ -143,19 +150,21 @@
         }
 
         .cta-btn {
-            background: linear-gradient(45deg, var(--accent-blue), var(--accent-cyan));
-            color: #000;
+            font-family: 'Syncopate', sans-serif;
+            background: linear-gradient(45deg, #1e3a8a, var(--accent-cyan));
+            color: #fff;
             padding: 0.8rem 2.5rem;
             border-radius: 50px;
-            font-weight: 600;
+            font-weight: 700;
+            font-size: 0.85rem;
             text-decoration: none;
             transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
         }
 
         .cta-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 242, 254, 0.5);
+            box-shadow: 0 6px 20px rgba(0, 191, 255, 0.5);
         }
 
         .section {
@@ -165,8 +174,9 @@
         }
 
         .section-title {
+            font-family: 'Syncopate', sans-serif;
             text-align: center;
-            font-size: 2.2rem;
+            font-size: 2rem;
             margin-bottom: 3rem;
         }
 
@@ -189,12 +199,13 @@
         }
 
         .card:hover {
-            border-color: rgba(0, 242, 254, 0.3);
+            border-color: rgba(0, 191, 255, 0.3);
             transform: translateY(-5px);
         }
 
         .card h3 {
-            font-size: 1.5rem;
+            font-family: 'Syncopate', sans-serif;
+            font-size: 1.1rem;
             margin-bottom: 1rem;
             color: var(--text-main);
         }
@@ -205,17 +216,18 @@
         }
 
         .guidance-banner {
-            background: linear-gradient(135deg, rgba(18, 18, 37, 0.8), rgba(0, 242, 254, 0.03));
-            border: 1px solid rgba(0, 242, 254, 0.1);
+            background: linear-gradient(135deg, rgba(18, 18, 37, 0.8), rgba(0, 191, 255, 0.03));
+            border: 1px solid rgba(0, 191, 255, 0.1);
             border-radius: 24px;
             padding: 3.5rem;
             margin-top: 4rem;
         }
 
         .guidance-text h3 {
-            font-size: 2rem;
+            font-family: 'Syncopate', sans-serif;
+            font-size: 1.8rem;
             margin-bottom: 1rem;
-            background: linear-gradient(45deg, var(--accent-cyan), var(--accent-blue));
+            background: linear-gradient(45deg, var(--accent-cyan), #4facfe);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -229,7 +241,7 @@
         }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
+            .hero h1 { font-size: 2.2rem; }
             .hero p { font-size: 1rem; }
             nav { display: none; }
             .guidance-banner { padding: 2rem; }
@@ -241,7 +253,10 @@
     <header>
         <div class="brand">
             <img src="logo.jpg" alt="The Quantum Drive Logo" class="brand-logo">
-            <div class="logo-text">THE QUANTUM DRIVE</div>
+            <div class="logo-text">
+                <span class="logo-word-blue">Quantum</span> 
+                <span class="logo-word-silver">Drive</span>
+            </div>
         </div>
         <nav>
             <a href="#philosophy">Philosophy</a>
@@ -256,6 +271,7 @@
         
         <div class="social-hub">
             <a href="https://www.instagram.com/thequantumdrive_/" class="social-btn instagram" target="_blank">📸 Instagram Updates</a>
+            <a href="#" class="social-btn youtube" target="_blank">▶️ YouTube Channel</a>
         </div>
 
         <a href="#guidance" class="cta-btn">Explore Our Ecosystem</a>
@@ -299,7 +315,7 @@
                 <p>Deep-dive mock scenarios and problem sets that mirror the analytical, multi-layered question patterns of the IISER Aptitude Test.</p>
             </div>
             <div class="card">
-                <h3 style="color: var(--accent-blue);">NEST (NISER / CEBS)</h3>
+                <h3 style="color: #4facfe;">NEST (NISER / CEBS)</h3>
                 <p>Rigorous physics training explicitly calibrated for the comprehensive conceptual demand of the National Entrance Screening Test.</p>
             </div>
             <div class="card">
