@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Quantum Drive | Pure Science & Research Preparation</title>
+    <style>
+        :root {
+            --bg-dark: #0a0a12;
+            --card-bg: #121225;
+            --accent-cyan: #00f2fe;
+            --accent-blue: #4facfe;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Branding integrated with your logo image */
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .brand-logo {
+            width: 55px;
+            height: 55px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 1px solid rgba(0, 242, 254, 0.2);
+        }
+
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--accent-blue), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-cyan);
+        }
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 1rem;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+            max-width: 800px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin-bottom: 2.5rem;
+        }
+
+        .social-hub {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-btn.instagram {
+            color: #fff;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            box-shadow: 0 4px 15px rgba(220, 39, 67, 0.25);
+        }
+
+        .social-btn.youtube {
+            color: #fff;
+            background: #ff0000;
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.25);
+        }
+
+        .social-btn:hover {
+            transform: translateY(-3px);
+            filter: brightness(1.1);
+        }
+
+        .cta-btn {
+            background: linear-gradient(45deg, var(--accent-blue), var(--accent-cyan));
+            color: #000;
+            padding: 0.8rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 242, 254, 0.5);
+        }
+
+        .section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+        }
+
+        .section-title span {
+            color: var(--accent-cyan);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .card:hover {
+            border-color: rgba(0, 242, 254, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .guidance-banner {
+            background: linear-gradient(135deg, rgba(18, 18, 37, 0.8), rgba(0, 242, 254, 0.03));
+            border: 1px solid rgba(0, 242, 254, 0.1);
+            border-radius: 24px;
+            padding: 3.5rem;
+            margin-top: 4rem;
+        }
+
+        .guidance-text h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--accent-cyan), var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 1rem; }
+            nav { display: none; }
+            .guidance-banner { padding: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand">
+            <img src="logo.jpg" alt="The Quantum Drive Logo" class="brand-logo">
+            <div class="logo-text">THE QUANTUM DRIVE</div>
+        </div>
+        <nav>
+            <a href="#philosophy">Philosophy</a>
+            <a href="#guidance">Mentorship</a>
+            <a href="#exams">Exams</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Think Like a Scientist.<br>Leave the <span>Rat Race Behind.</span></h1>
+        <p>An elite conceptual physics ecosystem built for future researchers. Prepare comprehensively for IAT, NEST, and UPST without losing the joy of discovery.</p>
+        
+        <div class="social-hub">
+            <a href="https://www.instagram.com/thequantumdrive_/" class="social-btn instagram" target="_blank">📸 Instagram Updates</a>
+        </div>
+
+        <a href="#guidance" class="cta-btn">Explore Our Ecosystem</a>
+    </section>
+
+    <section id="philosophy" class="section">
+        <h2 class="section-title">Why <span>The Quantum Drive</span>?</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>First-Principles Physics</h3>
+                <p>We don't teach shortcuts or formulas to memorize blindly. We rebuild physics intuition from fundamental axioms, paving the way for research-level thinking.</p>
+            </div>
+            <div class="card">
+                <h3>Avenue to Premier Institutes</h3>
+                <p>Tailored masterclasses specifically targeted at cracking IISERs, NISER, and CEBS admissions via the IAT and NEST examinations.</p>
+            </div>
+            <div class="card">
+                <h3>Ecosystem vs. Factory</h3>
+                <p>A community of like-minded peers who discuss thought experiments, academic literature, and foundations of physics rather than simple speed-solving matrices.</p>
+            </div>
+        </div>
+
+        <div id="guidance" class="guidance-banner">
+            <div class="guidance-text">
+                <h3>1-on-1 Personalized Guidance</h3>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1.1rem;">
+                    Every aspiring researcher takes a different path. We don't believe in crowded mass batches. Our structure features custom goal tracking, direct conceptual clearing, and customized strategies mapping back to real academic institutions.
+                </p>
+                <p style="color: var(--accent-cyan); font-weight: 600;">
+                    💡 Learn physics through intuition, not memorization.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="exams" class="section">
+        <h2 class="section-title">Targeted <span>Pathways</span></h2>
+        <div class="grid">
+            <div class="card">
+                <h3 style="color: var(--accent-cyan);">IAT (IISERs)</h3>
+                <p>Deep-dive mock scenarios and problem sets that mirror the analytical, multi-layered question patterns of the IISER Aptitude Test.</p>
+            </div>
+            <div class="card">
+                <h3 style="color: var(--accent-blue);">NEST (NISER / CEBS)</h3>
+                <p>Rigorous physics training explicitly calibrated for the comprehensive conceptual demand of the National Entrance Screening Test.</p>
+            </div>
+            <div class="card">
+                <h3 style="color: #a855f7;">UPST / Olympiads</h3>
+                <p>Advanced conceptual modules focusing on non-routine physics applications, preparing minds for research-level undergraduate screening tests.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 The Quantum Drive. Built for the next generation of thinkers.</p>
+    </footer>
+
+</body>
+</html>
