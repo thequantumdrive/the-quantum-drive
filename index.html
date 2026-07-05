@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Quantum Drive | Pure Science & Research Preparation</title>
-    <!-- Keeping Michroma and Syncopate strictly for the intentional logo matching / short headers -->
     <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Syncopate:wght@700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -89,7 +88,6 @@
             padding: 0 1rem;
         }
 
-        /* Cleaned headline using a classic, premium, standard font profile */
         .hero h1 {
             font-family: Arial, Helvetica, 'Segoe UI', sans-serif;
             font-size: 3.5rem;
@@ -120,7 +118,6 @@
             justify-content: center;
         }
 
-        /* Cleaned button styles — completely removing substandard emojis */
         .social-btn {
             display: inline-flex;
             align-items: center;
@@ -241,6 +238,105 @@
             color: var(--accent-blue);
         }
 
+        /* --- New Founders Section Styles --- */
+        .team-card {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .team-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent-blue);
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0, 136, 255, 0.15);
+        }
+
+        .team-title {
+            color: var(--accent-blue) !important;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-edu {
+            font-size: 0.85rem !important;
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+
+        .linkedin-btn {
+            color: #ffffff;
+            background-color: transparent;
+            border: 1px solid rgba(0, 136, 255, 0.4);
+            margin-top: auto;
+        }
+
+        .linkedin-btn:hover {
+            background-color: rgba(0, 136, 255, 0.1);
+            border-color: var(--accent-blue);
+            transform: translateY(-2px);
+        }
+
+        /* --- New Contact Form Styles --- */
+        .contact-container {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-email {
+            color: var(--text-main);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-email a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-form {
+            background-color: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.01);
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            text-align: left;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+        }
+
+        .form-submit {
+            border: none;
+            cursor: pointer;
+            margin-top: 0.5rem;
+            width: 100%;
+        }
+
         footer {
             text-align: center;
             padding: 3rem;
@@ -271,6 +367,8 @@
             <a href="#philosophy">Philosophy</a>
             <a href="#guidance">Mentorship</a>
             <a href="#exams">Exams</a>
+            <a href="#founders">Founders</a>
+            <a href="#join" style="color: var(--accent-blue); font-weight: bold;">Contact Us</a>
         </nav>
     </header>
 
@@ -279,7 +377,6 @@
         <p>An elite conceptual physics ecosystem built for future researchers. Prepare comprehensively for IAT, NEST, and UPST without losing the joy of discovery.</p>
         
         <div class="social-hub">
-            <!-- Updated Clean Destinations -->
             <a href="https://www.instagram.com/thequantumdrive_/" class="social-btn instagram" target="_blank">Instagram</a>
             <a href="https://www.youtube.com/@quantumdrivee" class="social-btn youtube" target="_blank">YouTube</a>
         </div>
@@ -332,6 +429,40 @@
                 <h3 style="color: #a855f7;">UPST / Olympiads</h3>
                 <p>Advanced conceptual modules focusing on non-routine physics applications, preparing minds for research-level undergraduate screening tests.</p>
             </div>
+        </div>
+    </section>
+
+    <section id="founders" class="section">
+        <h2 class="section-title">Meet The <span>Visionaries</span></h2>
+        <div class="grid">
+            <div class="card team-card">
+                <img src="swarup-img.jpg" alt="Swarup Karmarkar" class="team-img">
+                <h3>Swarup Karmarkar</h3>
+                <p class="team-title">Founder & Faculty Head</p>
+                <p class="team-edu">TMSL Kolkata - B.Tech CSE<br>(2025-2029)</p>
+                <a href="https://www.linkedin.com/in/swarup-karmarkar-07837840b/" class="social-btn linkedin-btn" target="_blank">Connect on LinkedIn</a>
+            </div>
+
+            <div class="card team-card">
+                <img src="indrani-img.jpg" alt="Indrani Ghosh Roy" class="team-img">
+                <h3>Indrani Ghosh Roy</h3>
+                <p class="team-title">Academic & Technical Director</p>
+                <p class="team-edu">IIT Jodhpur - BS Applied AI & Data Science<br>University of Calcutta - BS Physics (2025-2029)</p>
+                <a href="https://www.linkedin.com/in/indrani-ghosh-roy-915b96376/?skipRedirect=true" class="social-btn linkedin-btn" target="_blank">Connect on LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="join" class="section">
+        <h2 class="section-title">Join The <span>Ecosystem</span></h2>
+        <div class="contact-container">
+            <p class="contact-email">Reach out directly: <a href="mailto:ceoofquantumdrive@gmail.com">ceoofquantumdrive@gmail.com</a></p>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Tell us about your physics goals..." rows="4" required></textarea>
+                <button type="submit" class="cta-btn form-submit">Request Mentorship</button>
+            </form>
         </div>
     </section>
 
